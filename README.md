@@ -23,3 +23,5 @@ https://github.com/user-attachments/assets/4be8c2c3-f354-4c9b-a4a2-b10ebc944e34
 ## 🤖 AI-Assisted Development
 
 This prototype was conceptually engineered and coded using **Gemini 3**. The goal was to test the capabilities of LLMs in generating complex, interactive graphical interfaces from natural language prompts.
+
+You can run it on **VSCode** or online in **CodePen.io** or **JSFiddle**
