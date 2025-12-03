@@ -2,6 +2,7 @@
 
 A real-time interactive 3D particle system that responds to hand gestures via webcam. Built to explore the intersection of **Computer Vision** and **Web-based 3D Graphics**.
 
+**Access the [DEMO](https://dlopezyse.github.io/gesture-particles/)**
 
 https://github.com/user-attachments/assets/4be8c2c3-f354-4c9b-a4a2-b10ebc944e34
 
