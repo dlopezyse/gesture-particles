@@ -11,7 +11,6 @@ A real-time interactive 3D particle system that responds to hand gestures via we
     * **Tension:** Closing your fist creates a "gravitational pull," collapsing the particles.
     * **Scale:** Moving two hands apart zooms the universe in/out.
 * **Procedural Morphology:** Mathematical generation of 3D shapes (Heart, Saturn, Lotus, Torus Knot).
-* **Performance:** Renders 15,000+ particles using `THREE.BufferGeometry` for high FPS.
 
 ## 🛠️ Tech Stack
 
