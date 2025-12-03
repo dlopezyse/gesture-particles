@@ -20,7 +20,7 @@
             object-fit: cover;
             z-index: 0;
             transform: scaleX(-1); /* Mirror effect */
-            filter: brightness(0.4) contrast(1.2) grayscale(0.2); /* HUD Look: Darker background so particles glow */
+            filter: brightness(0.4) contrast(1.2) grayscale(0.2); /* HUD Look */
         }
         
         /* 3D CANVAS LAYER */
@@ -36,10 +36,10 @@
             top: 20px;
             left: 20px;
             width: 300px;
-            background: rgba(10, 10, 10, 0.5); /* More transparent for AR */
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 20px;
+            background: rgba(10, 10, 10, 0.6); /* Translucent dark */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 24px;
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: #ffffff;
@@ -83,6 +83,32 @@
             position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
             color: white; font-size: 1.5rem; pointer-events: none; font-weight: 300; text-align: center; z-index: 20;
         }
+
+        /* FOOTER / CREDIT STYLE */
+        .footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .made-by {
+            font-size: 0.8rem;
+            color: #e0e0e0;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        .contact-links a {
+            font-size: 0.75rem;
+            color: #888;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.3s;
+        }
+        .contact-links a:hover {
+            color: #00d2ff;
+            text-decoration: underline;
+        }
+        .separator { color: #444; font-size: 0.7rem; }
     </style>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -131,6 +157,15 @@
             ✊ Fist: Compress / Tense<br>
             👐 Pinch/Spread: Scale
         </div>
+
+        <div class="footer">
+            <div class="made-by">Made by Diego Lopez Yse</div>
+            <div class="contact-links">
+                <a href="https://github.com/dlopezyse" target="_blank">GitHub</a>
+                <span class="separator">|</span>
+                <a href="https://www.linkedin.com/in/lopezyse/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -150,7 +185,6 @@
         // --- 2. THREE.JS SETUP (AR MODE) ---
         const scene = new THREE.Scene();
         // NO FOG and NO BACKGROUND COLOR for AR
-        // scene.fog = ... (Removed)
         
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         camera.position.z = 35;
